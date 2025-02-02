@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS171</title>
+
+	<!-- Load CSS libraries -->
+	<!-- TODO: Add Bootstrap css -->
+
+	<!-- Completed: custom css included -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- GOOGLE FONTS -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<header>
+		<div class="header-content">
+			<h1>Za'atari Refugee Camp</h1>
+		</div>
+	</header>
+
+	<!-- 2. Two column layout -->
+	<div class="container">
+		<div class="left-column">
+			<h2>Camp Population</h2>
+			<div id="area-chart"></div>
+		</div>
+		<div class="right-column">
+			<h2>Type of Shelter</h2>
+			<div id="bar-chart"></div>
+		</div>
+	</div>
+
+	<!-- Footer info -->
+	<footer>
+		<p>* Households with recorded tent and caravan combinations</p>
+		<p>Source:</p>
+		<ul>
+			<li><a href="http://data.unhcr.org/syrianrefugees/settlement.php?id=176&ion=77&country=107">http://data.unhcr.org/syrianrefugees/settlement.php?id=176&ion=77&country=107</a></li>
+			<li><a href="http://www.reachresourcecentre.info/system/files/resource-documents/reach_jor_report_zaatari_camp_population_count_february2015_1.pdf">http://www.reachresourcecentre.info/system/files/resource-documents/reach_jor_report_zaatari_camp_population_count_february2015_1.pdf</a></li>
+		</ul>
+	</footer>
+
+	<!-- Completed: d3 included -->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+
+</body>
+</html>

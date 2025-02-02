@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS171</title>
+
+	<!-- Load CSS libraries -->
+	<!-- TODO: Add Bootstrap css -->
+
+	<!-- Completed: custom css included -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- GOOGLE FONTS -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<h1>CS171 - LAB 3 - ACTIVITY III</h1>
+	<!-- Completed: d3 included -->
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+
+	<script>
+		d3.csv("data/cities.csv", (row) => {
+			row.population = +row.population;
+			row.isEU = row.eu === "true";
+			row.x = +row.x;
+			row.y = +row.y;
+			return row;
+		}).then((data) => {
+			const euCities = data.filter(row => row.isEU);
+			const numEUCities = euCities.length;
+
+			d3.select("body")
+					.append("p")
+					.text(`Number of cities: ${numEUCities}`);
+
+			const svg = d3.select("body")
+					.append("svg")
+					.attr("width", 700)
+					.attr("height", 550);
+
+			// circles sizes
+			svg.selectAll("circle")
+					.data(euCities)
+					.enter()
+					.append("circle")
+					.attr("cx", d => d.x)
+					.attr("cy", d => d.y)
+					.attr("r", d => d.population < 1000000 ? 4 : 8)
+					.attr("fill", "orange");
+
+			// text labeling
+			svg.selectAll("text")
+					.data(euCities)
+					.enter()
+					.append("text")
+					.attr("x", d => d.x + 5)
+					.attr("y", d => d.y - 5)
+					.text(d => d.city)
+					.attr("class", "city-label")
+					.attr("opacity", d => d.population >= 1000000 ? 1 : 0);
+
+			console.log(euCities);
+		});
+		// (1) In which format is the information stored now?
+		// array of JavaScript objects, where each object is a row in the CSV file
+		// (2) Which properties are available?
+		// country, city, population
+		// (3) Check the types of the variables in the console
+		// all of them are strings even the population count
+	</script>
+
+	<script src="js/main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+.h1 {
+  color: black;
+}
+
+#city-label{
+  font-size: 11px;
+  text-anchor: middle;
+  font-weight: lighter;
+}

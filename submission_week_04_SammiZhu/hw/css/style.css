@@ -1,0 +1,77 @@
+header {
+  background-image: url('../img/refuge.jpg');
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content h1 {
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.left-column h2, .right-column h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+footer p, footer ul {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+.area {
+  fill: steelblue;
+  opacity: 0.6;
+}
+
+/****************/
+/*   BAR-CHART  */
+/****************/
+
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: steelblue;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line,
+.domain {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x-axis path {
+  display: none;
+}
+
+.x-axis text {
+  font-weight: bold;
+}
+
+.axis-title {
+  fill: #888;
+  font-size: 12px;
+}
+

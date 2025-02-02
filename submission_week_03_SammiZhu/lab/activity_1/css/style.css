@@ -1,0 +1,21 @@
+.svg-canvas {
+  width: 400px;
+  height: 200px;
+  background: black;
+}
+
+.center-rect {
+  fill: beige;
+  width: 200px;
+  height: 100px;
+}
+
+.center-circle {
+  fill: blue;
+}
+
+.text-container {
+  color: white;
+  font-size: 18px;
+}
+

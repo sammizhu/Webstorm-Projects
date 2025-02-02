@@ -1,0 +1,55 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F2E8E4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+h1 {
+  font-size: 3rem;
+  color: black;
+  font-weight: 500;
+  padding-top: 25px;
+  height: 100px;
+  margin-bottom: 20px;
+  background: #9C8C98;
+}
+
+/* Bar chart styling */
+#chart-area {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Change bar color on hover */
+.bar:hover {
+  fill: #494E69;
+}
+
+/* Building name labels on the left of bars */
+.building-label {
+  font-size: 16px;
+  font-weight: 500;
+  fill: #333;
+  cursor: pointer;
+}
+
+#details img {
+  margin-top: 20px;
+  border-radius: 8px;
+  display:none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*Wikipedia page link*/
+#details a {
+  color: #689AF6;
+  font-weight: 400;
+  margin-top: 20px;
+  display: block;
+}
+
