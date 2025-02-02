@@ -1,0 +1,46 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.header-title {
+    background-color: #2F3E79;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.label {
+    font-size: 9px;
+    fill: #333;
+}
+
+.bar {
+    fill: #4f81bd;
+}
+
+.area {
+    fill: steelblue;
+    stroke: #2a4b8d;
+    stroke-width: 1.5px;
+}
+
+.chart-container {
+    border-bottom: 1px solid #ccc;
+}
+
+/*remove border line under last bar chart*/
+.chart-container:last-child {
+    border-bottom: none;
+}

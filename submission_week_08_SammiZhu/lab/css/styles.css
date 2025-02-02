@@ -1,0 +1,43 @@
+.tooltip {
+    position: absolute;
+    text-align: center;
+    font: 12px sans-serif;
+    /*  pointer-events: none;	This line needs to be removed */
+}
+.tooltip h3,h4 {
+    text-align: left;
+}
+.tooltip h4 {
+    font: 14px sans-serif;
+}
+
+.connection {
+    stroke: black;
+    stroke-dasharray: 5;
+    stroke-width: 3px;
+    opacity: 0.7;
+}
+
+/* Ensure the parent container is a flexbox */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;  /* Align items at the top */
+    gap: 20px;  /* Add space between columns */
+    height: 100vh;  /* Use full viewport height */
+    padding: 20px;
+}
+
+/* Define the columns */
+.column {
+    flex: 1;  /* Ensure equal width */
+    max-width: 50%;  /* Limit the max width of each column */
+    box-sizing: border-box;
+    overflow: hidden;  /* Prevent overflow */
+}
+
+/* Ensure each visualization scales properly */
+svg {
+    width: 100%;
+    height: auto;
+}

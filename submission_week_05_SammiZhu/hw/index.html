@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS171 - HW 5</title>
+
+    <!-- CSS LIBRARIES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.css" integrity="sha512-DGB74Gyw93qON+V0QxSRs1er6sqoPyFoy23HBL5LN7MRJBcjeCU22zega+vOEGE0XQLoVrv4ExcaesSTwZQA2w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- YOUR CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>FIFA World Cup™</h1>
+    <h2>All Time Statistics Visualization</h2>
+
+    <!-- Attribute Selection Dropdown Menu -->
+    <div class="row">
+        <div class="col-3">
+            <select id="y-attribute" class="form-select">
+                <option value="GOALS" selected>Goals</option>
+                <option value="AVERAGE_GOALS">Average Goals</option>
+                <option value="MATCHES">Matches</option>
+                <option value="TEAMS">Teams</option>
+                <option value="AVERAGE_ATTENDANCE">Average Attendance</option>
+            </select>
+        </div>
+        <div class="col-3">
+        <div id="time-slider"></div>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div id="chart-area"></div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div id="details" class="details-box border rounded p-3">
+                <h3><span id="year"></span> FIFA World Cup Details</h3>
+                <p><strong>Winner:</strong> <span id="winner"></span></p>
+                <p><strong>Goals:</strong> <span id="goals"></span></p>
+                <p><strong>Average Goals:</strong> <span id="average-goals"></span></p>
+                <p><strong>Matches:</strong> <span id="matches"></span></p>
+                <p><strong>Teams:</strong> <span id="teams"></span></p>
+                <p><strong>Average Attendance:</strong> <span id="average-attendance"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- embedding JS libraries -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.min.js"
+        integrity="sha512-mZXUH8DAODwCHioWP3gltQwa953LbABMlzTYwYkKqv8eNxOk37B1HgNNuCMfFxgrpW5C34WJbxPDcM58+s1dJA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- d3 -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
